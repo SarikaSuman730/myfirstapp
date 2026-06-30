@@ -1,0 +1,73 @@
+import { Intern } from '../types/intern';
+
+export const interns: Intern[] = [
+    {
+        id: 1,
+        name: 'Sarah Wilson',
+        email: 'sarah.wilson@internhub.com',
+        phone: '+91 9876543210',
+        department: 'React Native',
+        college: 'Lovely Professional University',
+        status: 'Active',
+        progress: 92,
+        avatar: 'SW',
+        joiningDate: '10 Jan 2026',
+        skills: ['React Native', 'TypeScript'],
+    },
+
+    {
+        id: 2,
+        name: 'Alex Johnson',
+        email: 'alex.johnson@internhub.com',
+        phone: '+91 9876543211',
+        department: 'Cyber Security',
+        college: 'Lovely Professional University',
+        status: 'Completed',
+        progress: 100,
+        avatar: 'AJ',
+        joiningDate: '05 Jan 2026',
+        skills: ['Network Security', 'Linux'],
+    },
+
+    {
+        id: 3,
+        name: 'Emma Brown',
+        email: 'emma.brown@internhub.com',
+        phone: '+91 9876543212',
+        department: 'UI/UX Design',
+        college: 'Lovely Professional University',
+        status: 'On Leave',
+        progress: 68,
+        avatar: 'EB',
+        joiningDate: '18 Jan 2026',
+        skills: ['Figma', 'Adobe XD'],
+    },
+
+    {
+        id: 4,
+        name: 'David Miller',
+        email: 'david.miller@internhub.com',
+        phone: '+91 9876543213',
+        department: 'Backend Development',
+        college: 'Lovely Professional University',
+        status: 'Active',
+        progress: 80,
+        avatar: 'DM',
+        joiningDate: '12 Jan 2026',
+        skills: ['Node.js', 'MongoDB'],
+    },
+
+    {
+        id: 5,
+        name: 'Sophia Taylor',
+        email: 'sophia.taylor@internhub.com',
+        phone: '+91 9876543214',
+        department: 'Flutter',
+        college: 'Lovely Professional University',
+        status: 'Active',
+        progress: 88,
+        avatar: 'ST',
+        joiningDate: '15 Jan 2026',
+        skills: ['Flutter', 'Firebase'],
+    },
+];

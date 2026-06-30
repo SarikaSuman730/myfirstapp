@@ -1,24 +1,37 @@
-export const COLORS = {
+const Colors = {
+    // Primary
     primary: '#6C63FF',
-    secondary: '#9D4EDD',
+    primaryDark: '#4F46E5',
+    primaryLight: '#A78BFA',
 
+    // Secondary
+    secondary: '#0A1F44',
+
+    // Backgrounds
+    background: '#F4F7FC',
+    surface: '#FFFFFF',
+    card: '#FFFFFF',
+
+    // Text
+    textPrimary: '#111827',
+    textSecondary: '#6B7280',
+    textLight: '#9CA3AF',
+    white: '#FFFFFF',
+
+    // Status
     success: '#22C55E',
     warning: '#F59E0B',
     danger: '#EF4444',
+    info: '#3B82F6',
 
-    background: '#F5F7FB',
-    card: '#FFFFFF',
-
-    textPrimary: '#111827',
-    textSecondary: '#6B7280',
-
+    // Border
     border: '#E5E7EB',
 
-    white: '#FFFFFF',
-    black: '#000000',
+    // Shadow
+    shadow: '#000000',
 
-    gradientStart: '#6C63FF',
-    gradientEnd: '#9333EA',
-
-    shadow: '#D1D5DB',
+    // Misc
+    transparent: 'transparent',
 };
+
+export default Colors;

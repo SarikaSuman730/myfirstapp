@@ -5,7 +5,15 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import UsersScreen from '../screens/UsersScreen';
+import InternDirectoryScreen from '../screens/InternDirectoryScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+
+import {
+    Colors,
+    FontSize,
+    FontWeight,
+    Radius,
+} from '../theme';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,50 +23,84 @@ const BottomTabs = () => {
             screenOptions={({ route }) => ({
                 headerShown: false,
 
-                tabBarIcon: ({ color, size }) => {
-                    let iconName = '';
-
-                    if (route.name === 'Home')
-                        iconName = 'home';
-
-                    else if (route.name === 'Profile')
-                        iconName = 'person';
-
-                    else if (route.name === 'Users')
-                        iconName = 'people';
-
-                    else if (route.name === 'Settings')
-                        iconName = 'settings';
-
-                    return (
-                        <Icon
-                            name={iconName}
-                            size={24}
-                            color={color}
-                        />
-                    );
-                },
+                tabBarHideOnKeyboard: true,
 
                 tabBarStyle: {
                     position: 'absolute',
                     bottom: 15,
                     left: 15,
                     right: 15,
-                    height: 70,
-                    borderRadius: 20,
-                    backgroundColor: '#fff',
-                    elevation: 10,
+
+                    height: 75,
+
+                    paddingTop: 8,
+                    paddingBottom: 8,
+
+                    borderRadius: Radius.xxl,
+
+                    backgroundColor: Colors.surface,
+
+                    borderTopWidth: 0,
+
+                    elevation: 12,
+
+                    shadowColor: Colors.shadow,
+                    shadowOpacity: 0.12,
+                    shadowRadius: 10,
+                    shadowOffset: {
+                        width: 0,
+                        height: 4,
+                    },
                 },
 
-                tabBarActiveTintColor: '#7B2FF7',
-                tabBarInactiveTintColor: '#999',
+                tabBarActiveTintColor: Colors.primary,
+                tabBarInactiveTintColor: Colors.textSecondary,
 
                 tabBarLabelStyle: {
-                    fontSize: 12,
-                    fontWeight: '600',
+                    fontSize: FontSize.sm,
+                    fontWeight: FontWeight.semiBold,
                 },
-            })}
-        >
+
+                tabBarIcon: ({ color, size }) => {
+
+                    let iconName = '';
+
+                    switch (route.name) {
+
+                        case 'Home':
+                            iconName = 'home';
+                            break;
+
+                        case 'Profile':
+                            iconName = 'person';
+                            break;
+
+                        case 'Interns':
+                            iconName = 'briefcase';
+                            break;
+
+                        case 'Users':
+                            iconName = 'people';
+                            break;
+
+                        case 'Settings':
+                            iconName = 'settings';
+                            break;
+
+                        default:
+                            iconName = 'ellipse';
+                    }
+
+                    return (
+                        <Icon
+                            name={iconName}
+                            size={size}
+                            color={color}
+                        />
+                    );
+                },
+            })}>
+
             <Tab.Screen
                 name="Home"
                 component={HomeScreen}
@@ -70,6 +112,11 @@ const BottomTabs = () => {
             />
 
             <Tab.Screen
+                name="Interns"
+                component={InternDirectoryScreen}
+            />
+
+            <Tab.Screen
                 name="Users"
                 component={UsersScreen}
             />
@@ -78,6 +125,7 @@ const BottomTabs = () => {
                 name="Settings"
                 component={SettingsScreen}
             />
+
         </Tab.Navigator>
     );
 };

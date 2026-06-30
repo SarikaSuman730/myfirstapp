@@ -1,11 +1,12 @@
-import { COLORS } from './colors';
-import { FONT } from './fonts';
-import { SPACING } from './spacing';
-import { SHADOW } from './shadows';
+import Colors from './colors';
+import { FontSize, FontWeight } from './fonts';
+import Spacing from './spacing';
+import Radius from './radius';
 
-export const THEME = {
-    COLORS,
-    FONT,
-    SPACING,
-    SHADOW,
+export {
+    Colors,
+    FontSize,
+    FontWeight,
+    Spacing,
+    Radius,
 };
