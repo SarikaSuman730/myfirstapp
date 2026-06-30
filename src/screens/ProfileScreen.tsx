@@ -5,7 +5,6 @@ import {
     StyleSheet,
     ScrollView,
     TouchableOpacity,
-    Image,
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
@@ -16,14 +15,11 @@ const ProfileScreen = () => {
         <ScrollView style={styles.container}>
             <LinearGradient
                 colors={['#7B2FF7', '#9D4EDD']}
-                style={styles.header}>
-
-                <Image
-                    source={{
-                        uri: 'https://i.pravatar.cc/300',
-                    }}
-                    style={styles.avatar}
-                />
+                style={styles.header}
+            >
+                <View style={styles.avatar}>
+                    <Text style={styles.avatarText}>SS</Text>
+                </View>
 
                 <Text style={styles.name}>Sarika Suman</Text>
 
@@ -143,7 +139,7 @@ const ProfileScreen = () => {
                 </Text>
 
                 <Text style={styles.detail}>
-                    📧 sarika.suman8@gmail.com
+                    📧 sarika.suma8@gmail.com
                 </Text>
 
                 <Text style={styles.detail}>
@@ -168,11 +164,16 @@ const ProfileScreen = () => {
             <View style={styles.card}>
                 <TouchableOpacity style={styles.menuItem}>
                     <Icon name="person-outline" size={22} />
-                    <Text style={styles.menuText}>My Profile</Text>
+                    <Text style={styles.menuText}>
+                        My Profile
+                    </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.menuItem}>
-                    <Icon name="briefcase-outline" size={22} />
+                    <Icon
+                        name="briefcase-outline"
+                        size={22}
+                    />
                     <Text style={styles.menuText}>
                         Internship Details
                     </Text>
@@ -180,16 +181,25 @@ const ProfileScreen = () => {
 
                 <TouchableOpacity style={styles.menuItem}>
                     <Icon name="folder-outline" size={22} />
-                    <Text style={styles.menuText}>Projects</Text>
+                    <Text style={styles.menuText}>
+                        Projects
+                    </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.menuItem}>
-                    <Icon name="settings-outline" size={22} />
-                    <Text style={styles.menuText}>Settings</Text>
+                    <Icon
+                        name="settings-outline"
+                        size={22}
+                    />
+                    <Text style={styles.menuText}>
+                        Settings
+                    </Text>
                 </TouchableOpacity>
             </View>
 
-            <TouchableOpacity style={styles.logoutButton}>
+            <TouchableOpacity
+                style={styles.logoutButton}
+            >
                 <Text style={styles.logoutText}>
                     Logout
                 </Text>
@@ -217,8 +227,17 @@ const styles = StyleSheet.create({
         width: 120,
         height: 120,
         borderRadius: 60,
+        backgroundColor: '#FFFFFF',
+        justifyContent: 'center',
+        alignItems: 'center',
         borderWidth: 4,
-        borderColor: '#fff',
+        borderColor: '#FFFFFF',
+    },
+
+    avatarText: {
+        fontSize: 42,
+        fontWeight: 'bold',
+        color: '#7B2FF7',
     },
 
     name: {
@@ -338,3 +357,4 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
 });
+
